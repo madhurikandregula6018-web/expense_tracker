@@ -1,0 +1,27 @@
+print("------ Expense Tracker ------")
+
+num = int(input("How many expenses do you want to enter? "))
+
+expenses = []
+categories = []
+
+for i in range(num):
+    category = input(f"Enter category for expense {i+1}: ")
+    amount = float(input(f"Enter amount for {category}: "))
+    
+    categories.append(category)
+    expenses.append(amount)
+
+total = sum(expenses)
+highest = max(expenses)
+lowest = min(expenses)
+average = total / num
+
+print("\n----- Expense Summary -----")
+for i in range(num):
+    print(categories[i], ":", expenses[i])
+
+print("\nTotal Expense:", total)
+print("Highest Expense:", highest)
+print("Lowest Expense:", lowest)
+print("Average Expense:", average)
